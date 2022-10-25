@@ -27,7 +27,7 @@ function renderOption(item) {
             setModalVisible(false)
             setSelected(item.id)
         }}>
-            <Text style={[styles.optionTxt, {}]}>{item.name}</Text>
+            <Text style={[styles.optionTxt, {fontWeight: item.id == selected ? 'bold' : 'normal'}]}>{item.name}</Text>
             {item.id == selected && (
                 <Icon name={'check'} size={22} color={'green'}></Icon>)}
         </TouchableOpacity>
